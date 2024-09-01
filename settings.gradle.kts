@@ -1,3 +1,3 @@
-rootProject.name = "bukkit-sidebar"
+rootProject.name = "ProtocolSidebar"
 
 include(":standalone-plugin")
