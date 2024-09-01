@@ -64,20 +64,18 @@ val javadocJar by tasks.registering(Jar::class) {
 }
 
 publishing {
-
     // Configure all publications
     publications {
-
         create<MavenPublication>("mavenJava") {
             from(components["java"])
 
             artifact(javadocJar.get())
 
-            // Provide artifacts information requited by Maven Central
+            // Provide artifacts information required by Maven Central
             pom {
                 name.set("ProtocolSidebar")
                 description.set(project.description)
-                url.set("https://github.com/CatCoderr/ProtocolSidebar")
+                url.set("https://github.com/EntixOG/ProtocolSidebar")
 
                 licenses {
                     license {
@@ -93,34 +91,31 @@ publishing {
                     }
                 }
                 scm {
-                    url.set("https://github.com/CatCoderr/ProtocolSidebar")
-                    connection.set("scm:git:git://github.com:CatCoderr/ProtocolSidebar.git")
-                    developerConnection.set("scm:git:ssh://github.com:CatCoderr/ProtocolSidebar.git")
+                    url.set("https://github.com/EntixOG/ProtocolSidebar")
+                    connection.set("scm:git:git://github.com/EntixOG/ProtocolSidebar.git")
+                    developerConnection.set("scm:git:ssh://github.com/EntixOG/ProtocolSidebar.git")
                 }
 
                 issueManagement {
-                    url.set("https://github.com/CatCoderr/ProtocolSidebar/issues")
+                    url.set("https://github.com/EntixOG/ProtocolSidebar/issues")
                 }
+            }
+        }
+    }
 
+    // Configure the repository to push to
+    repositories {
+        maven {
+            name = "entix-repository"
+            url = uri("https://repo.entixog.de/releases")
+            credentials {
+                username = System.getenv("REPO_USER")
+                password = System.getenv("REPO_TOKEN")
             }
         }
     }
 }
 
-nexusPublishing {
-    repositories {
-        sonatype()
-    }
-}
-
-signing {
-    val signingKey = System.getenv("GPG_SECRET_KEY")
-    val signingPassword = System.getenv("GPG_PASSPHRASE")
-
-    useInMemoryPgpKeys(signingKey, signingPassword)
-
-    sign(publishing.publications["mavenJava"])
-}
 
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
