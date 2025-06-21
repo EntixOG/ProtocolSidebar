@@ -9,7 +9,7 @@ version = "6.2.10-SNAPSHOT"
 description = "Powerful feature-packed Minecraft scoreboard library"
 
 val adventureVersion = "4.16.0"
-val paperVersion = "1.20.1-R0.1-SNAPSHOT"
+val paperVersion = "1.20.4-R0.1-SNAPSHOT"
 val viaVersionVersion = "5.0.0"
 val viaNBTVersion = "5.0.2"
 val miniPlaceholdersVersion = "2.2.3"
