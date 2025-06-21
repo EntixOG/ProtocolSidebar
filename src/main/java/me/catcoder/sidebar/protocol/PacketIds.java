@@ -20,7 +20,9 @@ public enum PacketIds {
             map(ProtocolConstants.MINECRAFT_1_20_4, 0x5E),
             map(ProtocolConstants.MINECRAFT_1_20_4, 0x5E),
             map(ProtocolConstants.MINECRAFT_1_20_6, 0x60),
-            map(ProtocolConstants.MINECRAFT_1_21_2, 0x67)
+            map(ProtocolConstants.MINECRAFT_1_21_2, 0x67),
+            map(ProtocolConstants.MINECRAFT_1_21_6, 0x66)
+
     ),
     UPDATE_SCORE(
             map(ProtocolConstants.MINECRAFT_1_12_2, 0x45),
@@ -34,14 +36,15 @@ public enum PacketIds {
             map(ProtocolConstants.MINECRAFT_1_20_2, 0x5D),
             map(ProtocolConstants.MINECRAFT_1_20_4, 0x5F),
             map(ProtocolConstants.MINECRAFT_1_20_6, 0x61),
-            map(ProtocolConstants.MINECRAFT_1_21_2, 0x68)
-
+            map(ProtocolConstants.MINECRAFT_1_21_2, 0x68),
+            map(ProtocolConstants.MINECRAFT_1_21_6, 0x67)
 
     ),
     RESET_SCORE(
             map(ProtocolConstants.MINECRAFT_1_20_3, 0x42),
             map(ProtocolConstants.MINECRAFT_1_20_4, 0x44),
-            map(ProtocolConstants.MINECRAFT_1_21_2, 0x49)
+            map(ProtocolConstants.MINECRAFT_1_21_2, 0x49),
+            map(ProtocolConstants.MINECRAFT_1_21_6, 0x48)
     ),
     OBJECTIVE_DISPLAY(
             map(ProtocolConstants.MINECRAFT_1_12_2, 0x3B),
@@ -55,7 +58,8 @@ public enum PacketIds {
             map(ProtocolConstants.MINECRAFT_1_20_2, 0x53),
             map(ProtocolConstants.MINECRAFT_1_20_4, 0x55),
             map(ProtocolConstants.MINECRAFT_1_20_6, 0x57),
-            map(ProtocolConstants.MINECRAFT_1_21_2, 0x5C)
+            map(ProtocolConstants.MINECRAFT_1_21_2, 0x5C),
+            map(ProtocolConstants.MINECRAFT_1_21_6, 0x5B)
 
     ),
     OBJECTIVE(
@@ -70,7 +74,8 @@ public enum PacketIds {
             map(ProtocolConstants.MINECRAFT_1_20_2, 0x5A),
             map(ProtocolConstants.MINECRAFT_1_20_4, 0x5C),
             map(ProtocolConstants.MINECRAFT_1_20_6, 0x5E),
-            map(ProtocolConstants.MINECRAFT_1_21_2, 0x64)
+            map(ProtocolConstants.MINECRAFT_1_21_2, 0x64),
+            map(ProtocolConstants.MINECRAFT_1_21_6, 0x63)
     );
 
     private final ProtocolConstants.ProtocolMapping[] mappings;

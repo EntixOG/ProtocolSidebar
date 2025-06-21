@@ -25,6 +25,8 @@ public class PacketIdsTest {
 
         assertEquals(0x56, PacketIds.UPDATE_TEAMS.getPacketId(ProtocolConstants.MINECRAFT_1_19_3));
         assertEquals(0x5C, PacketIds.UPDATE_TEAMS.getPacketId(ProtocolConstants.MINECRAFT_1_20_2));
+
+        assertEquals(0x66, PacketIds.UPDATE_TEAMS.getPacketId(ProtocolConstants.MINECRAFT_1_21_6));
     }
 
     @Test(expected = IllegalArgumentException.class)
